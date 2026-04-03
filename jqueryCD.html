@@ -16,6 +16,7 @@
       <li class="surabaya">surabaya</li>
       <li class="jakarta">jakarta</li>
     </ul>
+    <button id="hidebandung">Hide</button>
   </body>
   <script src="JQuery.js"></script>
   <script>
@@ -37,6 +38,15 @@
       $("#TidakJadibandung").on("click", function () {
         $(".bandung").remove();
         alert("Tidak jadi pergi ke bandung");
+      });
+      $("#hidebandung").on("click", function () {
+        // $(".bandung").hide();
+        // $(".bandung").fadeOut(2000);
+        // $(".bandung").slideUp(2000);
+        // $(".bandung").toggle();
+        $(".bandung").animate({
+          marginLeft: "200px",
+        });
       });
     });
   </script>
