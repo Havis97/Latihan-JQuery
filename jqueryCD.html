@@ -8,9 +8,13 @@
   <body>
     <h1>Kemana Kamu Pergi?</h1>
     <ul class="lokasi">
-      <li>bandung</li>
-      <li>surabaya</li>
-      <li>jakarta</li>
+      <li class="bandung">
+        bandung
+        <button id="kebandung">pergi!</button>
+        <button id="TidakJadibandung">Tidak Jadi</button>
+      </li>
+      <li class="surabaya">surabaya</li>
+      <li class="jakarta">jakarta</li>
     </ul>
   </body>
   <script src="JQuery.js"></script>
@@ -20,10 +24,20 @@
       //   $("li").text("indonesia");
       // $(".amerika").text("amerika kampret");
 
-      var padang = $("<li>Padang</li>");
-      var bali = $("<li>Bali</li>");
-      $(".lokasi").prepend(padang);
-      $(".lokasi").append(bali);
+      // var padang = $("<li>Padang</li>");
+      // var bali = $("<li>Bali</li>");
+      // var subjudul = $("<h2>Lokasi destinasi</h2>");
+
+      // $(".lokasi").prepend(padang);
+      // $(".lokasi").append(bali);
+      // $(".lokasi").before(subjudul);
+      $("#kebandung").on("click", function () {
+        alert("kamu pergi ke bandung");
+      });
+      $("#TidakJadibandung").on("click", function () {
+        $(".bandung").remove();
+        alert("Tidak jadi pergi ke bandung");
+      });
     });
   </script>
 </html>
