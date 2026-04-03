@@ -7,8 +7,8 @@
   </head>
   <body>
     <h1>Kemana Kamu Pergi?</h1>
-    <ul>
-      <li class="amerika">bandung</li>
+    <ul class="lokasi">
+      <li>bandung</li>
       <li>surabaya</li>
       <li>jakarta</li>
     </ul>
@@ -18,7 +18,12 @@
     $(document).ready(function () {
       console.log("Document is ready!");
       //   $("li").text("indonesia");
-      $(".amerika").text("amerika kampret");
+      // $(".amerika").text("amerika kampret");
+
+      var padang = $("<li>Padang</li>");
+      var bali = $("<li>Bali</li>");
+      $(".lokasi").prepend(padang);
+      $(".lokasi").append(bali);
     });
   </script>
 </html>
