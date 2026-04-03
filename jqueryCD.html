@@ -4,19 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .merah {
+        color: red;
+      }
+      .biru {
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <h1>Kemana Kamu Pergi?</h1>
     <ul class="lokasi">
       <li class="bandung">
         bandung
-        <button id="kebandung">pergi!</button>
-        <button id="TidakJadibandung">Tidak Jadi</button>
+        <!-- <button id="kebandung">pergi!</button>
+        <button id="TidakJadibandung">Tidak Jadi</button> -->
       </li>
       <li class="surabaya">surabaya</li>
       <li class="jakarta">jakarta</li>
     </ul>
-    <button id="hidebandung">Hide</button>
+    <!-- <button id="hidebandung">Hide</button> -->
+    <button id="biru">biru</button>
+    <button id="merah">merah</button>
+    <button id="besar">besar</button>
   </body>
   <script src="JQuery.js"></script>
   <script>
@@ -32,20 +43,34 @@
       // $(".lokasi").prepend(padang);
       // $(".lokasi").append(bali);
       // $(".lokasi").before(subjudul);
-      $("#kebandung").on("click", function () {
-        alert("kamu pergi ke bandung");
+      // $("#kebandung").on("click", function () {
+      //   alert("kamu pergi ke bandung");
+      // });
+      // $("#TidakJadibandung").on("click", function () {
+      //   $(".bandung").remove();
+      //   alert("Tidak jadi pergi ke bandung");
+      // });
+      // $("#hidebandung").on("click", function () {
+      // $(".bandung").hide();
+      // $(".bandung").fadeOut(2000);
+      // $(".bandung").slideUp(2000);
+      // $(".bandung").toggle();
+      //   $(".bandung").animate({
+      //     marginLeft: "200px",
+      //   });
+      // });
+      // $(".bandung").addClass("merah");
+      $("#biru").on("click", function () {
+        $(".bandung").removeClass("merah");
+        $(".bandung").toggleClass("biru");
       });
-      $("#TidakJadibandung").on("click", function () {
-        $(".bandung").remove();
-        alert("Tidak jadi pergi ke bandung");
+      $("#merah").on("click", function () {
+        $(".bandung").removeClass("biru");
+        $(".bandung").toggleClass("merah");
       });
-      $("#hidebandung").on("click", function () {
-        // $(".bandung").hide();
-        // $(".bandung").fadeOut(2000);
-        // $(".bandung").slideUp(2000);
-        // $(".bandung").toggle();
+      $("#besar").on("click", function () {
         $(".bandung").animate({
-          marginLeft: "200px",
+          fontSize: "200px",
         });
       });
     });
